@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="130.88455772113943"/>
         </scene>
-        <!--Quote Builder View Controller-->
+        <!--Quote Builder-->
         <scene sceneID="JfS-92-T4s">
             <objects>
                 <viewController id="inp-tc-Eqv" customClass="QuoteBuilderViewController" customModule="W6D3_QuotePro" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,6 +140,13 @@
                             <constraint firstAttribute="trailing" secondItem="vcQ-zg-ZOm" secondAttribute="trailing" id="v6y-EC-Lkf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Quote Builder" id="m3T-fn-E1L">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="Klp-eY-C08"/>
+                            <barButtonItem title="Image" id="dQz-9U-ZMT"/>
+                            <barButtonItem title="Quote" id="WNq-xF-LPH"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vh3-tY-ZqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
