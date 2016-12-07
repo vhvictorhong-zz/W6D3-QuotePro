@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B6D51091DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D51081DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework */; };
 		2BB7C6621DF85C8600579B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6611DF85C8600579B84 /* AppDelegate.swift */; };
 		2BB7C6671DF85C8600579B84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB7C6651DF85C8600579B84 /* Main.storyboard */; };
 		2BB7C66A1DF85C8600579B84 /* W6D3_QuotePro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6681DF85C8600579B84 /* W6D3_QuotePro.xcdatamodeld */; };
@@ -17,6 +18,8 @@
 		2BB7C6931DF85E0D00579B84 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6921DF85E0D00579B84 /* HomeViewController.swift */; };
 		2BB7C6951DF85E2D00579B84 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6941DF85E2D00579B84 /* QuoteBuilderViewController.swift */; };
 		2BB7C6971DF8602500579B84 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6961DF8602500579B84 /* CustomTableViewCell.swift */; };
+		2BB830D71DF86C1200593D87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB830D61DF86C1200593D87 /* DataManager.swift */; };
+		485A02E61B60B711866C7A8A /* Pods_W6D3_QuotePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32ED2589C599DB315124BBE /* Pods_W6D3_QuotePro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25642A5AEBECC72A5CCB9B46 /* Pods-W6D3-QuotePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W6D3-QuotePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W6D3-QuotePro/Pods-W6D3-QuotePro.debug.xcconfig"; sourceTree = "<group>"; };
+		2B6D51081DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_W6D3_QuotePro.framework; path = "../../../../Library/Developer/Xcode/DerivedData/W6D3-QuotePro-bmsdilwfylfbtadpjqyezhszavmw/Build/Products/Debug-iphonesimulator/Pods_W6D3_QuotePro.framework"; sourceTree = "<group>"; };
 		2BB7C65E1DF85C8600579B84 /* W6D3-QuotePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W6D3-QuotePro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB7C6611DF85C8600579B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BB7C6661DF85C8600579B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +58,9 @@
 		2BB7C6921DF85E0D00579B84 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BB7C6941DF85E2D00579B84 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 		2BB7C6961DF8602500579B84 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2BB830D61DF86C1200593D87 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4B8B72870BA8F76869EA9D00 /* Pods-W6D3-QuotePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W6D3-QuotePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-W6D3-QuotePro/Pods-W6D3-QuotePro.release.xcconfig"; sourceTree = "<group>"; };
+		D32ED2589C599DB315124BBE /* Pods_W6D3_QuotePro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W6D3_QuotePro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6D51091DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework in Frameworks */,
+				485A02E61B60B711866C7A8A /* Pods_W6D3_QuotePro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A7BCA7EC2CC08F197FCCB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D51081DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework */,
+				D32ED2589C599DB315124BBE /* Pods_W6D3_QuotePro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BB7C6551DF85C8600579B84 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +106,8 @@
 				2BB7C6781DF85C8700579B84 /* W6D3-QuoteProTests */,
 				2BB7C6831DF85C8700579B84 /* W6D3-QuoteProUITests */,
 				2BB7C65F1DF85C8600579B84 /* Products */,
+				F5A1B599065E042D90F1365B /* Pods */,
+				05A7BCA7EC2CC08F197FCCB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +128,7 @@
 				2BB7C6921DF85E0D00579B84 /* HomeViewController.swift */,
 				2BB7C6941DF85E2D00579B84 /* QuoteBuilderViewController.swift */,
 				2BB7C6961DF8602500579B84 /* CustomTableViewCell.swift */,
+				2BB830D61DF86C1200593D87 /* DataManager.swift */,
 				2BB7C6651DF85C8600579B84 /* Main.storyboard */,
 				2BB7C66B1DF85C8600579B84 /* Assets.xcassets */,
 				2BB7C66D1DF85C8600579B84 /* LaunchScreen.storyboard */,
@@ -134,6 +156,15 @@
 			path = "W6D3-QuoteProUITests";
 			sourceTree = "<group>";
 		};
+		F5A1B599065E042D90F1365B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25642A5AEBECC72A5CCB9B46 /* Pods-W6D3-QuotePro.debug.xcconfig */,
+				4B8B72870BA8F76869EA9D00 /* Pods-W6D3-QuotePro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BB7C6891DF85C8700579B84 /* Build configuration list for PBXNativeTarget "W6D3-QuotePro" */;
 			buildPhases = (
+				5FA8BBCAE5DA51E4C321BCBC /* [CP] Check Pods Manifest.lock */,
 				2BB7C65A1DF85C8600579B84 /* Sources */,
 				2BB7C65B1DF85C8600579B84 /* Frameworks */,
 				2BB7C65C1DF85C8600579B84 /* Resources */,
+				AE4BC7EF9227557FDDA0EC8C /* [CP] Embed Pods Frameworks */,
+				ADA7404D23D3BDCA645B6756 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,12 +297,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5FA8BBCAE5DA51E4C321BCBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADA7404D23D3BDCA645B6756 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W6D3-QuotePro/Pods-W6D3-QuotePro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE4BC7EF9227557FDDA0EC8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W6D3-QuotePro/Pods-W6D3-QuotePro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BB7C65A1DF85C8600579B84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BB7C6621DF85C8600579B84 /* AppDelegate.swift in Sources */,
+				2BB830D71DF86C1200593D87 /* DataManager.swift in Sources */,
 				2BB7C6971DF8602500579B84 /* CustomTableViewCell.swift in Sources */,
 				2BB7C66A1DF85C8600579B84 /* W6D3_QuotePro.xcdatamodeld in Sources */,
 				2BB7C6951DF85E2D00579B84 /* QuoteBuilderViewController.swift in Sources */,
@@ -422,6 +505,7 @@
 		};
 		2BB7C68A1DF85C8700579B84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25642A5AEBECC72A5CCB9B46 /* Pods-W6D3-QuotePro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "W6D3-QuotePro/Info.plist";
@@ -434,6 +518,7 @@
 		};
 		2BB7C68B1DF85C8700579B84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8B72870BA8F76869EA9D00 /* Pods-W6D3-QuotePro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "W6D3-QuotePro/Info.plist";
@@ -517,6 +602,7 @@
 				2BB7C68B1DF85C8700579B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB7C68C1DF85C8700579B84 /* Build configuration list for PBXNativeTarget "W6D3-QuoteProTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +611,7 @@
 				2BB7C68E1DF85C8700579B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB7C68F1DF85C8700579B84 /* Build configuration list for PBXNativeTarget "W6D3-QuoteProUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +620,7 @@
 				2BB7C6911DF85C8700579B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

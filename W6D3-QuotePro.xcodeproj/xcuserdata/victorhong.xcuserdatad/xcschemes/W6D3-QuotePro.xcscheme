@@ -13,6 +13,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BB7C65D1DF85C8600579B84"
+            BuildableName = "W6D3-QuotePro.app"
+            BlueprintName = "W6D3-QuotePro"
+            ReferencedContainer = "container:W6D3-QuotePro.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +35,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BB7C65D1DF85C8600579B84"
+            BuildableName = "W6D3-QuotePro.app"
+            BlueprintName = "W6D3-QuotePro"
+            ReferencedContainer = "container:W6D3-QuotePro.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +54,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BB7C65D1DF85C8600579B84"
+            BuildableName = "W6D3-QuotePro.app"
+            BlueprintName = "W6D3-QuotePro"
+            ReferencedContainer = "container:W6D3-QuotePro.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
