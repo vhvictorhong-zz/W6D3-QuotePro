@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageHelper: NSObject {
-
+    
     func getDate() -> String {
         
         let date = Date()
@@ -22,13 +22,15 @@ class ImageHelper: NSObject {
         
     }
     
-    func saveImage(image: UIImage) {
+    func saveImage(image: UIImage) -> String {
         
         let fileManager = FileManager.default
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(self.getDate()).png")
         print(paths)
         let imageData = UIImagePNGRepresentation(image)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
+        
+        return paths
         
     }
     
@@ -38,10 +40,10 @@ class ImageHelper: NSObject {
         return documentsDirectory
     }
     
-    func loadImage() -> UIImage? {
+    func loadImage(imagePathString: String) -> UIImage? {
         
         let fileManager = FileManager.default
-        let imagePath = (self.getDirectoryPath() as NSString).appendingPathComponent("\(self.getDate()).png")
+        let imagePath = (self.getDirectoryPath() as NSString).appendingPathComponent("\(imagePathString).png")
         print(imagePath)
         if fileManager.fileExists(atPath: imagePath){
             

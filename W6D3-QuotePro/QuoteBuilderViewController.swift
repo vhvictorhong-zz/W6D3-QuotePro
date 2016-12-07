@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QuoteBuilderViewController: UIViewController, DataProtocol {
 
@@ -14,10 +15,14 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    var context: NSManagedObjectContext?
+    var appDelegate = AppDelegate()
     var dataManager = DataManager()
+    var imageHelper = ImageHelper()
     var quoteAuthor = ""
     var quoteText = ""
     var quoteImage: UIImage?
+    var imagePath = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,7 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
         // Do any additional setup after loading the view.
         
         self.dataManager.dataDelegate = self
+        self.context = self.appDelegate.persistentContainer.viewContext
         
     }
     
@@ -48,6 +54,7 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
         
         self.quoteImage = image
         imageView.image = image
+        self.imagePath = imageHelper.saveImage(image: image)
         
     }
     
@@ -68,6 +75,17 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
 
     @IBAction func saveImageButtom(_ sender: UIBarButtonItem) {
         
+        let mediaQuote = NSEntityDescription.insertNewObject(forEntityName: "MediaQuote", into: self.context!) as! MediaQuote
+        
+        mediaQuote.quoteAuthor = self.quoteAuthor
+        mediaQuote.quoteText = self.quoteText
+        mediaQuote.imagePath = self.imagePath
+        
+        do {
+            try self.context?.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
         
     }
     
