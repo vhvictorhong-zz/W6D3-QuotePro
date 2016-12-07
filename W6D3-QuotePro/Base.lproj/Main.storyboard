@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tPd-nj-TN9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfT-N2-SLX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="NWO-n9-mkt">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="REv-YK-wxq">
+                                            <connections>
+                                                <segue destination="inp-tc-Eqv" kind="show" id="HMa-9c-NUH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-KE-rQ4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,18 +91,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cLs-KE-rQ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9B1-ya-S0A"/>
+                            <constraint firstItem="cLs-KE-rQ4" firstAttribute="top" secondItem="tfT-N2-SLX" secondAttribute="bottom" id="3ED-08-Hct"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cLs-KE-rQ4" secondAttribute="bottom" id="AIh-47-wka"/>
+                            <constraint firstAttribute="trailing" secondItem="tfT-N2-SLX" secondAttribute="trailing" id="C05-Y6-Zgl"/>
                             <constraint firstItem="cLs-KE-rQ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VF0-y1-R8k"/>
+                            <constraint firstItem="tfT-N2-SLX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eb8-EB-nbn"/>
+                            <constraint firstItem="tfT-N2-SLX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="os4-Bd-i80"/>
                             <constraint firstAttribute="trailing" secondItem="cLs-KE-rQ4" secondAttribute="trailing" id="wXY-31-DzO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yK7-4L-5n0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jDh-Zt-mT7">
-                            <connections>
-                                <segue destination="inp-tc-Eqv" kind="show" identifier="QuoteBuilderSegue" id="ZYC-Jh-cpD"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jDh-Zt-mT7"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="cLs-KE-rQ4" id="R3R-hW-vdh"/>
@@ -98,9 +109,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1060" y="84"/>
         </scene>
-        <!--Quote Builder-->
+        <!--Quote Builder View Controller-->
         <scene sceneID="JfS-92-T4s">
             <objects>
                 <viewController id="inp-tc-Eqv" customClass="QuoteBuilderViewController" customModule="W6D3_QuotePro" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,48 +138,38 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ng-iL-Hk8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="ocs-8E-APf">
+                                        <leftBarButtonItems>
+                                            <barButtonItem title="Image" id="2et-U5-vw8"/>
+                                            <barButtonItem title="Quote" id="ZPw-Ba-Wdg"/>
+                                        </leftBarButtonItems>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z9H-Q0-m88"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vcQ-zg-ZOm" firstAttribute="top" secondItem="1ng-iL-Hk8" secondAttribute="bottom" id="2NH-sw-Xgc"/>
                             <constraint firstItem="lWx-h2-2kL" firstAttribute="centerY" secondItem="7Oy-S2-Fm1" secondAttribute="centerY" id="A9O-GV-3oh"/>
                             <constraint firstItem="o3L-JI-cNb" firstAttribute="top" secondItem="lWx-h2-2kL" secondAttribute="bottom" constant="50" id="F7P-ue-9mf"/>
-                            <constraint firstItem="vcQ-zg-ZOm" firstAttribute="top" secondItem="TSr-Eu-d5y" secondAttribute="bottom" id="QkH-Fk-qbl"/>
                             <constraint firstItem="o3L-JI-cNb" firstAttribute="centerX" secondItem="7Oy-S2-Fm1" secondAttribute="centerX" id="Qqd-pA-9s5"/>
+                            <constraint firstItem="1ng-iL-Hk8" firstAttribute="leading" secondItem="7Oy-S2-Fm1" secondAttribute="leading" id="QuT-5C-VgB"/>
+                            <constraint firstAttribute="trailing" secondItem="1ng-iL-Hk8" secondAttribute="trailing" id="V84-K0-29z"/>
                             <constraint firstItem="5d6-zD-88D" firstAttribute="top" secondItem="vcQ-zg-ZOm" secondAttribute="bottom" id="YJW-CZ-WNC"/>
                             <constraint firstItem="vcQ-zg-ZOm" firstAttribute="leading" secondItem="7Oy-S2-Fm1" secondAttribute="leading" id="YnA-Rm-eeO"/>
+                            <constraint firstItem="1ng-iL-Hk8" firstAttribute="top" secondItem="TSr-Eu-d5y" secondAttribute="bottom" id="csY-bh-9fn"/>
                             <constraint firstItem="lWx-h2-2kL" firstAttribute="centerX" secondItem="7Oy-S2-Fm1" secondAttribute="centerX" id="tmb-qq-Egr"/>
                             <constraint firstAttribute="trailing" secondItem="vcQ-zg-ZOm" secondAttribute="trailing" id="v6y-EC-Lkf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Quote Builder" id="m3T-fn-E1L">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="Klp-eY-C08"/>
-                            <barButtonItem title="Image" id="dQz-9U-ZMT"/>
-                            <barButtonItem title="Quote" id="WNq-xF-LPH"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vh3-tY-ZqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="131"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eW2-Nl-rBf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPd-nj-TN9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fsl-N0-VNr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7iC-nO-RJr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DJc-Px-fQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="233" y="131"/>
+            <point key="canvasLocation" x="1832.8" y="84.107946026986511"/>
         </scene>
     </scenes>
 </document>
