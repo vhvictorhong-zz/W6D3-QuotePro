@@ -97,6 +97,8 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
             
         }
         
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     
