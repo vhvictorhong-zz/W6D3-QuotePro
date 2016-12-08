@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //Storyboard properties
     @IBOutlet weak var tableView: UITableView!
+    
+    //Core Data
+    var context: NSManagedObjectContext?
+    var appDelegate = AppDelegate()
+    
+    //Initialize instance
+    var imageHelper = ImageHelper()
+    
+    //Properties
+    var mediaQuoteArray = [(imagePath: String, quoteText: String, quoteAuthor: String)]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        fetchData()
+        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchData()
+        
+        tableView.reloadData()
+        
+    }
     //MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,7 +49,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return mediaQuoteArray.count
         
     }
     
@@ -36,14 +57,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         
-        cell.cellQuoteLabel.text = "Quote"
-        cell.cellAuthorLabel.text = "Author"
+        //Configure cell
+        cell.cellQuoteLabel.text = mediaQuoteArray[indexPath.row].quoteText
+        cell.cellAuthorLabel.text = mediaQuoteArray[indexPath.row].quoteAuthor
+        cell.cellImageView.image = imageHelper.loadImage(imagePathString: mediaQuoteArray[indexPath.row].imagePath)
+        
         return cell
         
     }
     
-    
-    
+    func fetchData() {
+        
+        mediaQuoteArray.removeAll()
+        
+        self.context = self.appDelegate.persistentContainer.viewContext
+        let mediaQuoteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "MediaQuote")
+        
+        do {
+            let fetchedMediaQuotes = try self.context?.fetch(mediaQuoteFetch) as! [MediaQuote]
+            for mediaQuote in fetchedMediaQuotes {
+                //                print(mediaQuote.imagePath)
+                //                print(mediaQuote.quoteText)
+                //                print(mediaQuote.quoteAuthor)
+                mediaQuoteArray.append((imagePath: mediaQuote.imagePath!, quoteText: mediaQuote.quoteText!, quoteAuthor: mediaQuote.quoteAuthor!))
+            }
+        } catch {
+            fatalError("Failed to fetch MediaQuote: \(error)")
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

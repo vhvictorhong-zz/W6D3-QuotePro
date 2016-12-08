@@ -11,14 +11,20 @@ import CoreData
 
 class QuoteBuilderViewController: UIViewController, DataProtocol {
 
+    //Storyboard properties
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    //Core data
     var context: NSManagedObjectContext?
     var appDelegate = AppDelegate()
+    
+    //Initialize instance
     var dataManager = DataManager()
     var imageHelper = ImageHelper()
+    
+    //Properties
     var quoteAuthor = ""
     var quoteText = ""
     var quoteImage: UIImage?
@@ -75,16 +81,20 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
 
     @IBAction func saveImageButtom(_ sender: UIBarButtonItem) {
         
-        let mediaQuote = NSEntityDescription.insertNewObject(forEntityName: "MediaQuote", into: self.context!) as! MediaQuote
-        
-        mediaQuote.quoteAuthor = self.quoteAuthor
-        mediaQuote.quoteText = self.quoteText
-        mediaQuote.imagePath = self.imagePath
-        
-        do {
-            try self.context?.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
+        if !self.quoteAuthor.isEmpty && !self.quoteText.isEmpty && !self.imagePath.isEmpty {
+            
+            let mediaQuote = NSEntityDescription.insertNewObject(forEntityName: "MediaQuote", into: self.context!) as! MediaQuote
+            
+            mediaQuote.quoteAuthor = self.quoteAuthor
+            mediaQuote.quoteText = self.quoteText
+            mediaQuote.imagePath = self.imagePath
+            
+            do {
+                try self.context?.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+            
         }
         
     }

@@ -25,29 +25,24 @@ class ImageHelper: NSObject {
     func saveImage(image: UIImage) -> String {
         
         let fileManager = FileManager.default
-        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(self.getDate()).png")
-        print(paths)
+        let imagePath = "\(getDate()).png"
+        let paths = (NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imagePath)
         let imageData = UIImagePNGRepresentation(image)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         
-        return paths
+        return imagePath
         
-    }
-    
-    func getDirectoryPath() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
     }
     
     func loadImage(imagePathString: String) -> UIImage? {
         
         let fileManager = FileManager.default
-        let imagePath = (self.getDirectoryPath() as NSString).appendingPathComponent("\(imagePathString).png")
-        print(imagePath)
-        if fileManager.fileExists(atPath: imagePath){
+        
+        let paths = (NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imagePathString)
+        
+        if fileManager.fileExists(atPath: paths){
             
-            return UIImage(contentsOfFile: imagePath)!
+            return UIImage(contentsOfFile: paths)!
             
         }else{
             
