@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B45BACC1DF89561000DCE12 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45BACB1DF89561000DCE12 /* ImageHelper.swift */; };
+		2B605E7E1DF9B8F700A9EBC0 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B605E7D1DF9B8F700A9EBC0 /* QuoteView.xib */; };
+		2B605E801DF9BABF00A9EBC0 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B605E7F1DF9BABF00A9EBC0 /* QuoteView.swift */; };
 		2B6D51091DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D51081DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework */; };
 		2BB7C6621DF85C8600579B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7C6611DF85C8600579B84 /* AppDelegate.swift */; };
 		2BB7C6671DF85C8600579B84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB7C6651DF85C8600579B84 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		25642A5AEBECC72A5CCB9B46 /* Pods-W6D3-QuotePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W6D3-QuotePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W6D3-QuotePro/Pods-W6D3-QuotePro.debug.xcconfig"; sourceTree = "<group>"; };
 		2B45BACB1DF89561000DCE12 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		2B605E7D1DF9B8F700A9EBC0 /* QuoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
+		2B605E7F1DF9BABF00A9EBC0 /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		2B6D51081DF870C200DCDE5A /* Pods_W6D3_QuotePro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_W6D3_QuotePro.framework; path = "../../../../Library/Developer/Xcode/DerivedData/W6D3-QuotePro-bmsdilwfylfbtadpjqyezhszavmw/Build/Products/Debug-iphonesimulator/Pods_W6D3_QuotePro.framework"; sourceTree = "<group>"; };
 		2BB7C65E1DF85C8600579B84 /* W6D3-QuotePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W6D3-QuotePro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB7C6611DF85C8600579B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				2BB7C6961DF8602500579B84 /* CustomTableViewCell.swift */,
 				2BB830D61DF86C1200593D87 /* DataManager.swift */,
 				2B45BACB1DF89561000DCE12 /* ImageHelper.swift */,
+				2B605E7F1DF9BABF00A9EBC0 /* QuoteView.swift */,
+				2B605E7D1DF9B8F700A9EBC0 /* QuoteView.xib */,
 				2BB7C6651DF85C8600579B84 /* Main.storyboard */,
 				2BB7C66B1DF85C8600579B84 /* Assets.xcassets */,
 				2BB7C66D1DF85C8600579B84 /* LaunchScreen.storyboard */,
@@ -281,6 +287,7 @@
 				2BB7C66F1DF85C8600579B84 /* LaunchScreen.storyboard in Resources */,
 				2BB7C66C1DF85C8600579B84 /* Assets.xcassets in Resources */,
 				2BB7C6671DF85C8600579B84 /* Main.storyboard in Resources */,
+				2B605E7E1DF9B8F700A9EBC0 /* QuoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +363,7 @@
 				2BB7C6621DF85C8600579B84 /* AppDelegate.swift in Sources */,
 				2BB830D71DF86C1200593D87 /* DataManager.swift in Sources */,
 				2BB7C6971DF8602500579B84 /* CustomTableViewCell.swift in Sources */,
+				2B605E801DF9BABF00A9EBC0 /* QuoteView.swift in Sources */,
 				2BB7C66A1DF85C8600579B84 /* W6D3_QuotePro.xcdatamodeld in Sources */,
 				2BB7C6951DF85E2D00579B84 /* QuoteBuilderViewController.swift in Sources */,
 				2BB7C6931DF85E0D00579B84 /* HomeViewController.swift in Sources */,

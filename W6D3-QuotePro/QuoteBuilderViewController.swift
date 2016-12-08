@@ -10,15 +10,11 @@ import UIKit
 import CoreData
 
 class QuoteBuilderViewController: UIViewController, DataProtocol {
-
-    //Storyboard properties
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var quoteLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
     
     //Core data
     var context: NSManagedObjectContext?
     var appDelegate = AppDelegate()
+    var quoteView = QuoteView()
     
     //Initialize instance
     var dataManager = DataManager()
@@ -34,6 +30,10 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        quoteView = QuoteView.instanceFromNib()
+        
+        view.insertSubview(quoteView, at: 0)
+        quoteView.frame = view.bounds
         
         self.dataManager.dataDelegate = self
         self.context = self.appDelegate.persistentContainer.viewContext
@@ -45,21 +45,21 @@ class QuoteBuilderViewController: UIViewController, DataProtocol {
     func gotQuoteAuthor(quoteAuthor: String) {
         
         self.quoteAuthor = quoteAuthor
-        authorLabel.text = quoteAuthor
+        quoteView.authorLabel.text = quoteAuthor
         
     }
 
     func gotQuoteText(quoteText: String) {
         
         self.quoteText = quoteText
-        quoteLabel.text = quoteText
+        quoteView.quoteLabel.text = quoteText
         
     }
     
     func gotImage(image: UIImage) {
         
         self.quoteImage = image
-        imageView.image = image
+        quoteView.quoteImageView.image = image
         self.imagePath = imageHelper.saveImage(image: image)
         
     }
